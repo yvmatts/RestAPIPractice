@@ -1,0 +1,22 @@
+{
+  "name": "restapipractice",
+  "version": "1.0.0",
+  "description": "A simple REST API created for practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvmatts/RestAPIPractice.git"
+  },
+  "author": "yvmatts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yvmatts/RestAPIPractice/issues"
+  },
+  "homepage": "https://github.com/yvmatts/RestAPIPractice#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
