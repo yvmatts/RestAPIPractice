@@ -2,7 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Taxi = require('../models/taxi.js');
 router.get('/taxi',function(req,res,next){
-  res.send({type:'GET'});
+  Taxi.geoNear(
+    {type:'Point',coordinates:[parseFloat(req.query.lat),parseFloat(req.query.lng)]},
+    {maxDistance:100000,spherical:true}
+  ).then(function(taxis){
+    res.send(taxis);
+  });
 });
 
 router.post('/taxi',function(req,res,next){

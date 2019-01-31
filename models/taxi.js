@@ -1,6 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+const GeoSchema = new Schema({
+    type:{
+      type:String,
+      default:'Point'
+    },
+    coordinates:{
+      type:[Number],
+      index:"2dsphere"
+    }
+  });
+
 const TaxiSchema = new Schema({
   name:{
         type:String,
@@ -20,7 +32,8 @@ const TaxiSchema = new Schema({
   available:{
               type:Boolean,
               default:false
-            }
+            },
+  geometry:GeoSchema
 });
 
 const Taxi = mongoose.model('taxi',TaxiSchema);
