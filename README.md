@@ -1,6 +1,6 @@
 # TaxiLocation API
 
-A simple REST API that stores the location of Taxis and can provide the details of the Taxi nearest to you. It is implemented using Node.js & MongoDB
+A simple REST API that stores the location of Taxis and can provide the details of the Taxi nearest to you. It is implemented using Node.js & MongoDB. GeoJSON is used for location handling.
 
 ## Deployment
 
